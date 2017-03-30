@@ -54,6 +54,30 @@ public class WeightOnPlanet extends Application {
         tfMoon = new TextField();
         tfMoon.setEditable(false);
         gridPane.add(tfMoon, 1, 1);
+        
+        Label lbVenus = new Label("Venus");
+        lbVenus.setStyle("-fx-font-size: 18pt; -fx-text-fill: #0000ff;");
+        gridPane.add(lbVenus, 0, 2);
+
+        tfVenus = new TextField();
+        tfVenus.setEditable(false);
+        gridPane.add(tfVenus, 1, 2);
+        
+        Label lbMars = new Label("Mars");
+        lbMars.setStyle("-fx-font-size: 18pt; -fx-text-fill: #0000ff;");
+        gridPane.add(lbMars, 0, 3);
+
+        tfMars = new TextField();
+        tfMars.setEditable(false);
+        gridPane.add(tfMars, 1, 3);
+        
+        Label lbJupiter = new Label("Jupiter");
+        lbJupiter.setStyle("-fx-font-size: 18pt; -fx-text-fill: #0000ff;");
+        gridPane.add(lbJupiter, 0, 4);
+
+        tfJupiter = new TextField();
+        tfJupiter.setEditable(false);
+        gridPane.add(tfJupiter, 1, 4);
 
         // add other planets here later
         
@@ -83,6 +107,12 @@ public class WeightOnPlanet extends Application {
         double weight = Double.parseDouble(tfEarth.getText());
         double moonWeight = weight * GRAVITY_MOON;
         tfMoon.setText(String.format("%.2f", moonWeight));
+        double venusWeight = weight * GRAVITY_VENUS;
+        tfVenus.setText(String.format("%.2f", venusWeight));
+        double marsWeight = weight * GRAVITY_MARS;
+        tfMars.setText(String.format("%.2f", marsWeight));
+        double jupiterWeight = weight * GRAVITY_JUPITER;
+        tfJupiter.setText(String.format("%.2f", jupiterWeight));
         // do other planets here...
     }
     
